@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Ali Sawari @aliSawari",
   "license": "MIT",
+  "scripts":{
+    "start":"webpack && node server.js"
+  },
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",

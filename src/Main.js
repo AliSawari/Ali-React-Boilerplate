@@ -14,7 +14,7 @@ class Hello extends Component {
     super(props);
   }
   render(){
-    return <h1>Meee? Working for that hair titted yeti ???!!</h1>
+    return <h1>Hello React</h1>
   }
 }
 

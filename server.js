@@ -1,11 +1,11 @@
 const express = require('express'),
 D = __dirname,
-fs = require('fs'),
 app = express(),
 {urlencoded} = require('body-parser');
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Credentials', true);
+  res.removeHeader('x-powered-by');
   next();
 });
 
@@ -18,5 +18,5 @@ app.get('*', (req, res) => {
 
 app.listen(3000, (err) => {
   if(err) console.log(err);
-  console.log("Up!");
+  console.log("Server up on port 3000!");
 });
