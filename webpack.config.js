@@ -1,5 +1,5 @@
 module.exports = {
-  entry: "./src/Main.js",
+  entry: './src/Main.js',
   output: {
     path: __dirname,
     filename: "./public/bundle.js"
@@ -8,10 +8,10 @@ module.exports = {
     extensions:[".js",".jsx"]
   },
   module: {
-    loaders: [
+    rules: [
       {
-        use : "babel-loader",
-        exclude: /(node_modules)/
+       exclude: /(node_modules)/,
+       use: ['babel-loader']
       }
     ]
   }
