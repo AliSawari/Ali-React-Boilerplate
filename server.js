@@ -1,4 +1,5 @@
 const express = require('express'),
+port = process.env.PORT || 3000,
 D = __dirname,
 app = express(),
 {urlencoded} = require('body-parser');
@@ -12,11 +13,7 @@ app.use((req, res, next) => {
 app.use(urlencoded({extended:true}));
 app.use(express.static(`${D}/public`));
 
-app.get('*', (req, res) => {
-  res.sendFile(`${D}/public/index.html`);
-});
-
-app.listen(3000, (err) => {
-  if(err) console.log(err);
-  console.log("Server up on port 3000!");
+app.listen(port, (err) => {
+  if(err) return console.log(err);
+  console.log(`Server is up on port ${port}`);
 });
