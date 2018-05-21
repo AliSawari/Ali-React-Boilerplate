@@ -2,13 +2,13 @@
   "name": "Ali-React-Boilerplate",
   "version": "0.1.1",
   "description": "my react app boilerplate",
-  "main": "index.js",
+  "main": "server.js",
   "author": "Ali Sawari @AliSawari",
   "license": "MIT",
   "scripts": {
-    "build-dev": "webpack -w --mode=development",
-    "build-pro": "webpack --mode=production",
-    "start": "npm run build-pro && node server.js"
+    "dev": "webpack -w --mode=development",
+    "pro": "webpack --mode=production",
+    "start": "npm run pro && node ."
   },
   "dependencies": {
     "babel-core": "^6.26.0",
