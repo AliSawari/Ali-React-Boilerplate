@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-function gebi(id) {
-	return document.getElementById(id);
-}
-
 const Render = C => {
-	return ReactDOM.render(<C/>, gebi('root'));
+	return ReactDOM.render(<C/>, document.getElementById('root'));
 }
 
 class Hello extends Component {
